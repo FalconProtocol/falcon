@@ -6,12 +6,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Falcon is a currency transfer protocol using bitcoin as a cryptocurrency conduit.">
+    <meta name="description" content="Falcon is a currency transfer protocol using B§itcoin as a cryptocurrency conduit.">
     <meta name="author" content="Switchless">
 
     <meta property="og:image" content="falcon/img/icon.png" />
     <meta property="og:title" content="FALCON" />
-    <meta property="og:description" content="FALCON is a currency transfer protocol using bitcoin as a cryptocurrency conduit." />
+    <meta property="og:description" content="FALCON is a currency transfer protocol using B§itcoin as a cryptocurrency conduit." />
 
     <link rel="shortcut icon" href="falcon/img/favicon.png">
 
@@ -60,7 +60,7 @@
                         <a href="#page-top"></a>
                     </li>
                      <li>
-                        <a class="page-scroll" href="#roles">Roles</a>
+                        <a class="page-scroll" href="#roles">Overview</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#api">API</a>
@@ -140,6 +140,32 @@
 
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Simple Overview</h2>
+                <p>
+                  The Payer will instruct the Sender gateway to send foreign currency to the Beneficiary's account at the Receiver gateway.
+                </p>
+                <p>
+                  The Sender gateway will send a request, containing transaction details like descriptions, beneficiary account identifier, amount of foreign currency to be paid to Beneficiary account, etc, as well as an unique B§itcoin refund address to the Receiver gateway.
+                </p>
+                <p>
+                  The Receiver will verify the Beneficiary account details, and get a quote for selling B§itcoin to the value of the amount of fiat currency required by the transaction.
+                </p>
+                <p>
+                  The Receiver will respond to the Sender with an transaction expiry timestamp, a unique Bitcoin address for the transaction, as well as the required Bitcoin to exercise the quote and credit the fiat to the Beneficiary account.
+                </p>
+                <p>
+                  The Sender will get a quote for buying the required Bitcoin, and present a quote for the transaction to the Payer.
+                </p>
+                <p>
+                  The Payer accept the quote.
+                </p>
+                <p>The Sender executes the Liquidity Provider's buy quote, and sends the resulting Bitcoin to the Receiver's specified transaction Bitcoin address.</p>
+                <p>The Receiver receives the Bitcoin, and executes its Liquidity Provider's sell quote.</p>
+                <p>The expected fiat is then credited to the Beneficiary's account</p>
+            </div>
+          </div>
     </section>
 
 
@@ -166,10 +192,8 @@ API specification to follow
                 <div class='light'>
                   <p>While the FALCON protocol will be open for anyone to implement,<br/> it would require some coordination for any two parties to transact.</p>
                   <p>To address the main concerns Switchless will manage and maintain a registry and act as a certificate authority<br/> to institutions that implement FALCON and complies with relevant regulatory requirements.</p>
-                  <p>Registry members will be able to easily transact with other members without direct formal agreements, while being assured that international KYC&AML standard procedures are being respected by all counter parties.</p>
-
+                  <p>Registry members will be able to easily transact with other members without direct formal agreements, while being assured that international KYC&AML standard procedures are being respected by all counter parties and mitigating any Bitcoin transaction timing risks.</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -181,8 +205,8 @@ API specification to follow
                 <h2>Bitcoin Liquidity</h2>
                 <div class='light'>
                   <p>FALCON requires each gateway to be or have access to a Bitcoin Liquidity provider.</p>
-                  <p>It is up to the gateway to decide on the specifics, but ideally it is a service that buys and sells bitcoin at quoted prices.</p>
-                  <p>Regardsless of where gateways buy and sell bitcoin, they must be in a position to quote fiat prices for bitcoin that will be fixed and honoured for a short period of time (enought time for Payer to accept and action quotes).</p>
+                  <p>It is up to the gateway to decide on the specifics, but ideally it is a service that buys and sells B§itcoin at quoted prices.</p>
+                  <p>Regardsless of where gateways buy and sell B§itcoin, they must be in a position to quote fiat prices for B§itcoin that will be fixed and honoured for a short period of time (enought time for Payer to accept and action quotes).</p>
                 </div>
 
             </div>
