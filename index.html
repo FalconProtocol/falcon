@@ -1,54 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Falcon : specification of the Falcon protocol for currency transfer">
+<head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Falcon is a currency transfer protocol using bitcoin as a cryptocurrency conduit.">
+    <meta name="author" content="Switchless">
 
-    <title>Falcon</title>
-  </head>
+    <meta property="og:image" content="/images/logo.png" />
+    <meta property="og:title" content="FALCON" />
+    <meta property="og:description" content="FALCON is a currency transfer protocol using bitcoin as a cryptocurrency conduit." />
 
-  <body>
+    <link rel="shortcut icon" href="/falcon/img/favicon.png">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/switchless/falcon">View on GitHub</a>
+    <title>FALCON - Currency Transfer Protocol</title>
 
-          <h1 id="project_title">Falcon</h1>
-          <h2 id="project_tagline">specification of the Falcon protocol for currency transfer</h2>
+    <!-- Bootstrap Core CSS -->
+    <link href="falcon/css/bootstrap.min.css" rel="stylesheet">
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/switchless/falcon/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/switchless/falcon/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+    <!-- Custom CSS -->
+    <link href="falcon/css/falcon.css" rel="stylesheet">
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="falcon" class="anchor" href="#falcon"><span class="octicon octicon-link"></span></a>FALCON.</h3>
+    <!-- Custom Fonts -->
+    <link href="falcon/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600' rel='stylesheet' type='text/css'>
 
-<p>Soon this will be updated with the specifications of the Falcon global value transfer protocol.</p>
 
-<p><img src="http://i.dailymail.co.uk/i/pix/2009/06/29/article-1196206-0583D016000005DC-359_634x445.jpg" alt="A falcon, catching a swift."></p>
-      </section>
-    </div>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Falcon maintained by <a href="https://github.com/switchless">switchless</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+</head>
 
-    
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-  </body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <img src='falcon/img/icon.png'/> <span class="light">FALCON</span>
+
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#how">How does it work?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/switchless/falcon">View on GitHub</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src='falcon/img/icon.png'/>
+                        <h1 class="intro-text">FALCON</h1>
+                        <h3 class="brand-heading">THE FUTURE OF MOVING MONEY</h3>
+                        <p>CRYPTOCURRENCY TRANSFER PROTOCOL</p>
+                        <br/><br/><br/><p><a href="mailto:&#102;&#97;&#108;&#99;&#111;&#110;&#64;&#115;&#119;&#105;&#116;&#99;&#104;&#108;&#101;&#115;&#115;&#46;&#99;&#111;&#109;" class="btn btn-default btn-lg">Request Invite</a></p><br/><br/><br/>
+                        <a href="#how" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- About Section -->
+    <section id="how" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>HOW DOES IT WORK?</h2>
+                <p><img src="falcon/img/how-diagram.png" style="width:100%"/></p>
+                <div>
+                    <ol style="text-align: justify;">
+                      <li>Alice from USA wants to send &euro;100 to Gertrude in Germany</li>
+                      <li>Alice's bank asks Gertrude's bank how much Bitcoin it needs to send them so they would send &euro;100 to Gertrude</li>
+                      <li>Gertrude's bank gets a quote from a liquidity provider (&#x0E3F;0.23), and passes it, along with a bitcoin address, back to Alice's bank.</li>
+                      <li>Alice's bank gets a quote from its liquidity provider for buying &#x0E3F;0.23 ($130)</li>
+                      <li>Alice confirms the transaction, and Alice's bank uses Alice's US$ in her account to exercise the quote.</li>
+                      <li>It sends &#x0E3F;0.23 to the bitcoin address provided by Gertrude's bank.</li>
+                      <li>Gertrude's bank receives the bitcoin and executes the quote</li>
+                      <li>Gertrude gets her &euro;100</li>
+                    </ol>
+                </div>
+                <p class='light'>All faster than you can say "the airspeed velocity of an unladen swift"</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About</h2>
+                <div class='light'>
+                  <p>International money transfer has been slow, expensive and complicated. Until now.</p>
+                  <p>Falcon is the best way to send money from one point to another.
+                    <br/>It's built for speed using standard web technologies and is available for anyone to use.<br/>
+                It is designed to run on bitcoin, but it can be adapted for other crypto-currencies too.</p>
+                  <p>Fast. Secure. Ultra-affordable. And open. Falcon is the future of money.</p>
+                </div>
+
+            </div>
+        </div>
+        </div class="row"
+            <br/><br/><br/><br/>
+            <div class="col-lg-8 col-lg-offset-2">
+                <h3>WE'VE BUILT FALCON FOR</h3>
+
+            </div>
+        </div>
+        <div class="row light">
+            <div class="col-md-3">
+              <img src='falcon/img/banks.png' /><br/><br/>
+              <p>BANKS</p>
+            </div>
+            <div class="col-md-3">
+              <img src='falcon/img/telecoms.png' /><br/><br/>
+              <p>TELECOMS OPERATORS</p>
+            </div>
+            <div class="col-md-3">
+              <img src='falcon/img/exchanges.png' /><br/><br/>
+              <p>BITCOIN EXCHANGES</p>
+            </div>
+            <div class="col-md-3">
+              <img src='falcon/img/you.png' /><br/><br/>
+              <p>YOU</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>GET IN TOUCH</h2>
+                <div class='light'>
+                  <p>We've designed FALCON as an open protocol that any accountable institution can implement,<br/> but we also maintain a registry of validated, integrated and compliant gateways.</p>
+                  <p>We will release details of our registry and the protocol specification to the public<br/> as soon as beta tests have been done.</p>
+                  <p>FALCON is currently being piloted by a number of institutions globally.<br/> If you want to be part of the pilot programme let us know here.</p>
+                  <p><a href="mailto:&#102;&#97;&#108;&#99;&#111;&#110;&#64;&#115;&#119;&#105;&#116;&#99;&#104;&#108;&#101;&#115;&#115;&#46;&#99;&#111;&#109;">&#102;&#97;&#108;&#99;&#111;&#110;&#64;&#115;&#119;&#105;&#116;&#99;&#104;&#108;&#101;&#115;&#115;&#46;&#99;&#111;&#109;</a>
+                  </p>
+                  <ul class="list-inline banner-social-buttons">
+                      <li>
+                          <a href="https://twitter.com/goswitchless" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                      </li>
+                      <li>
+                          <a href="https://switchless.github.io/falcon" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                      </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="small light">&copy; 2014 SWITCHLESS. ALL RIGHT RESERVED</p>
+        </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="falcon/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="falcon/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="falcon/js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="falcon/js/falcon.js"></script>
+
+</body>
+
 </html>
