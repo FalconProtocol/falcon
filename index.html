@@ -9,11 +9,11 @@
     <meta name="description" content="Falcon is a currency transfer protocol using bitcoin as a cryptocurrency conduit.">
     <meta name="author" content="Switchless">
 
-    <meta property="og:image" content="/images/logo.png" />
+    <meta property="og:image" content="falcon/img/icon.png" />
     <meta property="og:title" content="FALCON" />
     <meta property="og:description" content="FALCON is a currency transfer protocol using bitcoin as a cryptocurrency conduit." />
 
-    <link rel="shortcut icon" href="/falcon/img/favicon.png">
+    <link rel="shortcut icon" href="falcon/img/favicon.png">
 
     <title>FALCON - Currency Transfer Protocol</title>
 
@@ -47,7 +47,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
 
-                <img src='falcon/img/icon.png'/> <span class="light">FALCON</span>
+                <img src='falcon/img/icon.png'/>
 
 
             </div>
@@ -64,6 +64,9 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#api">API</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#ca">Registry</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -84,7 +87,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <img src='falcon/img/icon.png'/>
+                        <img src='falcon/img/icon.png' class="logo"/>
                         <h1 class="intro-text">FALCON</h1>
                         <h3 class="brand-heading">THE FUTURE OF MOVING MONEY</h3>
                         <p>CRYPTOCURRENCY TRANSFER PROTOCOL</p>
@@ -106,8 +109,12 @@
                 <h2>Roles</h2>
                 <table class='table'>
                   <tr>
+                    <th>Gateway</th>
+                    <td> an accountable institution that implements the FALCON protocol <td>
+                  </tr>
+                  <tr>
                     <th>Sender</th>
-                    <td> an accountable institution that implements falcon protocol to allow its clients (<strong>payers</strong>) to send money<td>
+                    <td> a <strong>gateway</strong> that allow its clients (<strong>payers</strong>) to send money<td>
                   </tr>
                   <tr>
                     <th>Payer</th>
@@ -115,7 +122,7 @@
                   </tr>
                   <tr>
                     <th>Receiver</th>
-                    <td> an accountable institution that implements falcon protocol to allow its clients (<strong>beneficiaries</strong>) to receive money<td>
+                    <td> a <strong>gateway</strong> that allow its clients (<strong>beneficiaries</strong>) to receive money<td>
                   </tr>
                   <tr>
                     <th>Benficiary</th>
@@ -123,7 +130,7 @@
                   </tr>
                   <tr>
                     <th>Liquidity Provider</th>
-                    <td>a service that buys Bitcoin from <strong>Receiver</strong> and sells Bitcoin to <strong>Sender</strong> at quoted prices and volumes.<br/> Could be different providers.</td>
+                    <td>a service that buys Bitcoin from <strong>Receiver</strong> and sells Bitcoin to <strong>Sender</strong> at quoted prices and volumes</td>
                   </tr>
                 </table>
 
@@ -133,12 +140,11 @@
     </section>
 
 
-    <!-- About Section -->
     <section id="api" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>API</h2>
-                <div class='light'>
+                <div class='light text-left'>
 <pre>
 API specification to follow
 </pre>
@@ -148,6 +154,38 @@ API specification to follow
             </div>
         </div>
     </section>
+
+
+    <section id="ca" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Registry and Certificate Authority</h2>
+                <div class='light'>
+                  <p>While the FALCON protocol will be open for anyone to implement,<br/> it would require some coordination for any two parties to transact.</p>
+                  <p>To address the main concerns Switchless will manage and maintain a registry and act as a certificate authority<br/> to institutions that implement FALCON and complies with relevant regulatory requirements.</p>
+                  <p>Registry members will be able to easily transact with other members without direct formal agreements, while being assured that international KYC&AML standard procedures are being respected by all counter parties.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="liquidity" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Bitcoin Liquidity</h2>
+                <div class='light'>
+                  <p>FALCON requires each gateway to be or have access to a Bitcoin Liquidity provider.</p>
+                  <p>It is up to the gateway to decide on the specifics, but ideally it is a service that buys and sells bitcoin at quoted prices.</p>
+                  <p>Regardsless of where gateways buy and sell bitcoin, they must be in a position to quote fiat prices for bitcoin that will be fixed and honoured for a short period of time (enought time for Payer to accept and action quotes).</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- Contact Section -->

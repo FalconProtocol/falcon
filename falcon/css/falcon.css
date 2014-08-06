@@ -72,6 +72,11 @@ p {
     line-height: 1.5;
 }
 
+img.logo {
+    width: 30px;
+    height: 30px;
+}
+
 @media(min-width:767px) {
     p {
         margin: 0 0 35px;
@@ -312,7 +317,20 @@ a:focus {
     width: 100%;
     padding: 60px 0;
     background-color: #3B5B7C;
-    /*background: url(../img/contact-bg.jpg) no-repeat bottom center scroll;*/
+}
+
+#liquidity {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #1C2C41;
+    color: #fff;
+}
+
+#ca {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #e3e3e3;
+    color: #333;
 }
 
 @media(min-width:767px) {
