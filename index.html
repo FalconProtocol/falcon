@@ -179,9 +179,32 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>API</h2>
                 <div class='light text-left'>
+                  <p>
+                    The FALCON protocol utilises standard web protocols.<br/>The only layers it depends on is HTTPS and Bitcoin.
+                  </p>
+<h4>Example</h4>
 <pre>
-API specification to follow
+POST HTTPS endpoint.example/falcon/pay
 </pre>
+<br/><br/>
+<h6>Request</h6>
+<pre>
+curl https://endpoint.example/falcon/pay \
+   -u sender_registry_token: \
+   -d amount=15900 \
+   -d currency=USD \
+   -d account=BX456898765 \
+   -d refund_address=1B1tC0InExAMPL3rEfundAdDreS5t0Use \
+   -d "description=Remittance Gift from Sender"
+</pre>
+<br/><br/>
+<h6>Response</h6>
+<pre id="response">
+{
+  "currency"   : "XBT",
+  "amount"     : "0.28",
+  "address"    : "1B1tC0InExAMPL3fundIN6AdDreS5t0Use",
+  "expires_at" : </pre>
                   <p></p>
                 </div>
 
