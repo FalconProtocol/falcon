@@ -182,7 +182,7 @@
                   <p>
                     The FALCON protocol utilises standard web protocols.<br/>The only layers it depends on is HTTPS and Bitcoin.
                   </p>
-<h4>Example</h4>
+<h4>A Simple Example</h4>
 <pre>
 POST HTTPS endpoint.example/falcon/pay
 </pre>
@@ -190,7 +190,7 @@ POST HTTPS endpoint.example/falcon/pay
 <h6>Request</h6>
 <pre>
 curl https://endpoint.example/falcon/pay \
-   -u sender_registry_token: \
+   -u sender_registry_token \
    -d amount=15900 \
    -d currency=USD \
    -d account=BX456898765 \
