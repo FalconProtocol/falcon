@@ -293,6 +293,10 @@ a:focus {
 .content-section {
     padding-top: 100px;
 }
+.row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
 
 #roles {
     width: 100%;
