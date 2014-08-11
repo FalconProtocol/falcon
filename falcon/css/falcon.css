@@ -203,7 +203,7 @@ a:focus {
 
 @media(min-width:767px) {
     .intro {
-        height: 120px;
+        height: 100px;
         padding: 0;
     }
 
