@@ -29,11 +29,21 @@ The basic case is where a *payer* wants to send a specified amount of money to a
 
 A HTTPS POST request is made to the Receiver falcon endpoint containing all the information needed to verify authenticity of the request, verify the beneficiary, identify the sender and all the transaction information needed to generate a quote and subsequently transfer the funds.
 
-HTTPS request:
+HTTPS POST request:
 
-```http
-POST /falcon?account=BX456898765?amount=15900?currency=USD?description=Remittance+Gift+from+Payer?payer=identification-information?refund_address=1B1tC0InExAMPL3rEfundAdDreS5t0Use?sender=auth-token-or-cert
 ```
+curl https://endpoint.example/falcon/ \
+   --cert institution.pem \
+   -u auth_token \
+   -d amount=15900 \
+   -d currency=USD \
+   -d account=BX456898765 \
+   -d refund_address=1B1tC0InExAMPL3rEfundAdDreS5t0Use \
+   -d "description=Remittance Gift from Sender" \
+   -d "payer=payer AML info"
+   
+```
+
 
 JSON success response:
 ```json
