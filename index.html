@@ -6,12 +6,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Falcon is a currency transfer protocol using B§itcoin as a cryptocurrency conduit.">
+    <meta name="description" content="Falcon is a currency transfer protocol using Bitcoin as a cryptocurrency conduit.">
     <meta name="author" content="Switchless">
 
     <meta property="og:image" content="falcon/img/icon.png" />
     <meta property="og:title" content="FALCON" />
-    <meta property="og:description" content="FALCON is a currency transfer protocol using B§itcoin as a cryptocurrency conduit." />
+    <meta property="og:description" content="FALCON is a currency transfer protocol using Bitcoin as a cryptocurrency conduit." />
 
     <link rel="shortcut icon" href="falcon/img/favicon.png">
 
@@ -130,7 +130,7 @@
                     <td> a <strong>gateway</strong> that allow its clients (<strong>beneficiaries</strong>) to receive money<td>
                   </tr>
                   <tr>
-                    <th>Benficiary</th>
+                    <th>Beneficiary</th>
                     <td> an account holder at the <strong>receiving</strong> gateway<td>
                   </tr>
                   <tr>
@@ -151,10 +151,10 @@
                   The Payer will instruct the Sender gateway to send foreign currency to the Beneficiary's account at the Receiver gateway.
                 </p>
                 <p>
-                  The Sender gateway will send a request, containing transaction details like descriptions, beneficiary account identifier, amount of foreign currency to be paid to Beneficiary account, etc, as well as an unique B§itcoin refund address to the Receiver gateway.
+                  The Sender gateway will send a request, containing transaction details like descriptions, beneficiary account identifier, amount of foreign currency to be paid to Beneficiary account, etc, as well as an unique Bitcoin refund address to the Receiver gateway.
                 </p>
                 <p>
-                  The Receiver will verify the Beneficiary account details, and get a quote for selling B§itcoin to the value of the amount of fiat currency required by the transaction.
+                  The Receiver will verify the Beneficiary account details, and get a quote for selling Bitcoin to the value of the amount of fiat currency required by the transaction.
                 </p>
                 <p>
                   The Receiver will respond to the Sender with an transaction expiry timestamp, a unique Bitcoin address for the transaction, as well as the required Bitcoin to exercise the quote and credit the fiat to the Beneficiary account.
@@ -236,8 +236,8 @@ curl https://endpoint.example/falcon/pay \
                 <h2>Bitcoin Liquidity</h2>
                 <div class='light'>
                   <p>FALCON requires each gateway to be or have access to a Bitcoin Liquidity provider.</p>
-                  <p>It is up to the gateway to decide on the specifics, but ideally it is a service that buys and sells B§itcoin at quoted prices.</p>
-                  <p>Regardsless of where gateways buy and sell B§itcoin, they must be in a position to quote fiat prices for B§itcoin that will be fixed and honoured for a short period of time (enought time for Payer to accept and action quotes).</p>
+                  <p>It is up to the gateway to decide on the specifics, but ideally it is a service that buys and sells Bitcoin at quoted prices.</p>
+                  <p>Regardsless of where gateways buy and sell Bitcoin, they must be in a position to quote fiat prices for Bitcoin that will be fixed and honoured for a short period of time (enought time for Payer to accept and action quotes).</p>
                 </div>
 
             </div>
