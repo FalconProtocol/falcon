@@ -176,7 +176,7 @@ a:focus {
 .intro {
     display: table;
     width: 100%;
-
+    height: auto;
     padding: 60px 0px;
     text-align: center;
     color: #fff;
@@ -203,7 +203,7 @@ a:focus {
 
 @media(min-width:767px) {
     .intro {
-        height: 100px;
+        height: 100%;
         padding: 0;
     }
 
@@ -289,13 +289,35 @@ a:focus {
         transform: scale(1);
     }
 }
-
+.round-icon{
+    width: 70px;
+    height: 70px;
+}
 .content-section {
     padding-top: 100px;
 }
 .row {
     margin-right: 0px !important;
     margin-left: 0px !important;
+}
+
+#how {
+    width: 100%;
+    padding: 60px 20px;
+    
+    background-color: #1C2C41;
+    color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#about {
+    width: 100%;
+    padding: 60px 0;
+    color: #000;
+    background-color: #e3e3e3;
 }
 
 #roles {
@@ -316,6 +338,7 @@ a:focus {
     /*background: url(../img/light.png) no-repeat bottom center scroll;*/
     color: #fff;
 }
+
 
 #contact {
     width: 100%;

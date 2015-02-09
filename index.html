@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Falcon is a currency transfer protocol using Bitcoin as a cryptocurrency conduit.">
-    <meta name="author" content="Switchless">
+    <meta name="author" content="Falcon Protocol">
 
     <meta property="og:image" content="falcon/img/icon.png" />
     <meta property="og:title" content="FALCON" />
@@ -21,7 +21,7 @@
     <link href="falcon/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="falcon/css/falcon.css" rel="stylesheet">
+    <link href="falcon/css/falcon.css?" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="falcon/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -47,8 +47,9 @@
                     <i class="fa fa-bars"></i>
                 </button>
 
-                <p> <img src='falcon/img/icon.png' class='logo'/> &nbsp; FALCON</p>
-
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img src='falcon/img/icon.png' class="logo"/>
+                </a>
 
             </div>
 
@@ -59,8 +60,8 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                     <li>
-                        <a class="page-scroll" href="#roles">Overview</a>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#api">API</a>
@@ -86,27 +87,103 @@
 
     <!-- Intro Header -->
     <header class="intro">
-        <!--div class="intro-body">
+        <div class="intro-body">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <img src='falcon/img/icon.png' class="logo"/>
                         <h1 class="intro-text">FALCON</h1>
-                        <p>CRYPTOCURRENCY TRANSFER PROTOCOL</p>
                         <h3 class="brand-heading">THE FUTURE OF MOVING MONEY</h3>
-                        <br/><br/><br/><br/><br/><br/>
-                        <a href="#how" class="btn btn-circle page-scroll">
+                        <p class="light">Global money transfers using an open cryptocurrency protocol.</p>
+                        <br/><br/><br/><p><a href="#contact" class="page-scroll btn btn-default btn-lg">Request Invite</a></p><br/><br/><br/>
+                        <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
                     </div>
                 </div>
             </div>
-        </div-->
+        </div>
     </header>
 
 
     <!-- About Section -->
-    <section id="roles" class="container content-section ">
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <h2>About</h2>
+            <div class='light'>
+              <p>FALCON is an open protocol that any institution can implement.</p>
+              <p>The protocol specification is under active development based on community feedback.</p>
+              <p>We also maintain a registry of validated, integrated and compliant gateways.</p>
+            </div>
+          </div>
+        </div>
+        </div class="row"
+          <br/><br/><br/><br/>
+          <div class="col-lg-8 col-lg-offset-2">
+            <h3>FALCON IS DESIGNED FOR</h3>
+          </div>
+        </div>
+        <div class="row light">
+          <div class="col-md-3">
+            <img src='falcon/img/banks.png' class='round-icon'/><br/><br/>
+            <p>BANKS</p>
+          </div>
+          <div class="col-md-3">
+            <img src='falcon/img/telecoms.png' class='round-icon'/><br/><br/>
+            <p>TELECOMS OPERATORS</p>
+          </div>
+          <div class="col-md-3">
+            <img src='falcon/img/exchanges.png' class='round-icon'/><br/><br/>
+            <p>BITCOIN EXCHANGES</p>
+          </div>
+          <div class="col-md-3">
+            <img src='falcon/img/you.png' class='round-icon'/><br/><br/>
+            <p>REMITTANCE</p>
+          </div>
+        </div>
+
+    </section>
+
+
+    <section id="how" class="container content-section">
+
+
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2  col-xs-12 col-xs-offset-0 light text-center">
+            <h2>HOW DOES IT WORK?</h2>
+
+            <p>
+              FALCON leverages the Bitcoin protocol to move money around the world.<br/> It is built for speed and simplicity using standard web technologies<br/> and is available for anyone to use, for free.
+            </p>
+            <p>
+              Unlike other crypto transfer protocols, it is decentralised,<br/> does not rely on debt or correspondent bank accounts,<br/> and can easily be adapted to run off other cryptocurrency protocols.
+            </p>
+
+            <p class="text-justify">
+              Example:
+
+
+              <ol class="text-justify">
+                ­<li> Alice lives in the USA and wants to send &euro;100 to Dorothy in Germany.</li>
+                ­<li> Alice’s bank requests a Bitcoin quote from Dorothy’s bank for the equivalent of &euro;100.</li>
+                ­<li> Dorothy’s bank gets a quote from a FALCON-approved liquidity provider (&#x0E3F;0.23) <br/> and a unique Bitcoin address for the transaction.</li>
+                ­<li> Alice’s bank receives a quote from its liquidity provider for buying &#x0E3F;0.23 ($130).</li>
+                ­<li> Alice’s bank confirms the transaction and uses dollars from her account to exercise the quote,<br/> sending &#x0E3F;0.23 to the address from Dorothy’s bank.</li>
+                ­<li> Dorothy’s bank receives the Bitcoin and accepts the quote from their liquidity provider.</li>
+                ­<li> Dorothy gets &euro;100.</li>
+              </ol>
+            </p>
+
+          </div>
+        </div>
+
+    </section>
+
+
+    
+    <!--roles section -->
+    <section id="roles" class="container content-section">
 
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
@@ -147,6 +224,7 @@
             <div class="col-lg-8 col-lg-offset-2">
               <h4>Simple FALCON Transaction Flow</h4>
                 <div class="light">
+                <img src="falcon/img/how-diagram.png" style="width:100%"/>
                 <p>
                   The Payer will instruct the Sender gateway to send foreign currency to the Beneficiary's account at the Receiver gateway.
                 </p>
@@ -171,6 +249,8 @@
                 </div>
 
                 <a href="images/transaction_flow.png">view transaction flow diagram</a>
+
+
             </div>
           </div>
 
@@ -248,18 +328,59 @@ curl https://endpoint.example/falcon/pay \
     </section>
 
 
-
     <!-- Contact Section -->
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>GET IN TOUCH</h2>
                 <div class='light'>
+
                   <p>We've designed FALCON as an open protocol that any accountable institution can implement,<br/> but we also maintain a registry of validated, integrated and compliant gateways.</p>
                   <p>We will release details of our registry and the protocol specification to the public<br/> as soon as beta tests have been done.</p>
-                  <p>FALCON is currently being piloted by a number of institutions globally.<br/> If you want to be part of the pilot programme let us know here.</p>
-                  <p><a href="mailto:&#102;&#97;&#108;&#99;&#111;&#110;&#64;&#115;&#119;&#105;&#116;&#99;&#104;&#108;&#101;&#115;&#115;&#46;&#99;&#111;&#109;">&#102;&#97;&#108;&#99;&#111;&#110;&#64;&#115;&#119;&#105;&#116;&#99;&#104;&#108;&#101;&#115;&#115;&#46;&#99;&#111;&#109;</a>
-                  </p>
+                  <p>FALCON is currently being piloted by a number of institutions globally.<br/> If you want to be part of the pilot programme, or want to be notified of releases, let us know here.</p>
+
+                  <div>
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form class="validate form-horizontal" role='form' action="//mybitx.us3.list-manage.com/subscribe/post?u=4a2db6801add2161b997553ab&amp;id=0805ca8ad4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+
+<div class="form-group">
+  <label for="mce-EMAIL" class="col-lg-2 col-lg-offset-3 control-label">Email Address  <span class="asterisk">*</span></label>
+  <div class="col-lg-4">
+    <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL">
+  </div>
+</div>
+<div class="form-group">
+  <label for="mce-NAME" class="col-lg-2 col-lg-offset-3 control-label">Name </label>
+  <div class="col-lg-4">
+    <input type="text" value="" name="NAME" class="form-control" id="mce-NAME">
+  </div>
+</div>
+<div class="form-group">
+  <label for="mce-ORG" class="col-lg-2 col-lg-offset-3 control-label">Organisation </label>
+  <div class="col-lg-4">
+    <input type="text" value="" name="ORG" class="form-control" id="mce-ORG">
+  </div>
+</div>
+  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_4a2db6801add2161b997553ab_0805ca8ad4" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="I'm interested" name="subscribe" id="mc-embedded-subscribe" class="btn btn-warning btn-lg"></div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script type='text/javascript'>
+(function($) {
+window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='NAME';ftypes[1]='text';fnames[3]='ORG';ftypes[3]='text';
+}(jQuery));
+var $mcj = jQuery.noConflict(true);
+</script>
+<!--End mc_embed_signup-->
+                  </div>
+                  <br/>
+
 
                 </div>
             </div>
@@ -269,9 +390,26 @@ curl https://endpoint.example/falcon/pay \
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p class="small light">&copy; 2014 SWITCHLESS. ALL RIGHT RESERVED</p>
+
+                  <ul class="list-inline banner-social-buttons">
+                      <!--li>
+                          <a href="https://twitter.com/goswitchless" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                      </li-->
+                      <li>
+                          <a href="https://github.com/FalconProtocol/falcon" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                      </li>
+
+                      <!--li>
+                          <a href="mailto:&#102;&#97;&#108;&#99;&#111;&#110;&#64;&#115;&#119;&#105;&#116;&#99;&#104;&#108;&#101;&#115;&#115;&#46;&#99;&#111;&#109;" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Email</span></a>
+                      </li-->
+
+                  </ul>
+            <br/><br/>
+
+            <p class="small light">&copy; 2014 Falcon Protocol. ALL RIGHT RESERVED</p>
         </div>
     </footer>
+
 
     <!-- jQuery Version 1.11.0 -->
     <script src="falcon/js/jquery-1.11.0.js"></script>
