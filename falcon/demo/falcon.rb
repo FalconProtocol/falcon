@@ -37,6 +37,8 @@ end
 
 class Falcon < Sinatra::Base
 
+
+  # handle api authentication
   helpers do
     def protected!
       return if authorized?
@@ -69,9 +71,11 @@ class Falcon < Sinatra::Base
     {status: "OK"}.to_json
   end
 
-  # FALCON protocol endpoint
+  # FALCON protocol receive endpoint
   # using httpie for demo:
   # http -a falcon:demo POST localhost:9292/falcon account==BXACCT0001 amount==200 currency==zar refund_address==127zNrQ7jfeTonFCGN2K7znptdKXt8Pz9N payer==falcontestdemohash
+  #
+  # This method relies on a number of
   post '/falcon' do
     protected!
     pay_to( params[:account] ) do |account|
@@ -116,9 +120,10 @@ class Falcon < Sinatra::Base
   end
 
 
+  # * mocked for demo *
   def create_quote(cur, amount)
-    # an example of using BitX broker
-    # BitX.create_quote("#{cur}XBT", add_profit(amount), "BUY")
+    # an example of using BitX broker:
+    #   BitX.create_quote("#{cur}XBT", add_profit(amount), "BUY")
     # would return something like the following
     {
       id:             1234,
@@ -133,19 +138,24 @@ class Falcon < Sinatra::Base
     }
   end
 
+  # some profit/added cost calculations
   def add_profit(amount)
     amount * 1.005
   end
 
-  def available_balance(cur)
-    #TODO check balance available for payout
-    1000
-  end
-
+  # confirm the amount can be credited to the receiver
   def can_deliver?(cur, amount)
     amount > 0.01 && amount <= available_balance(cur)
   end
 
+  # check balance available for payout
+  # * mocked for demo *
+  def available_balance(cur)
+    1000
+  end
+
+  # performs some validation check or CA service lookup for possible KYC/AML requirements
+  # for demo we just check that is isn't blank
   def validate_payer(payer_hash, &block)
     if payer_hash.nil? || payer_hash == ''
       halt 400, {
@@ -162,6 +172,7 @@ class Falcon < Sinatra::Base
     end
   end
 
+  # requires a valid bitcoin address to send refunds (over- or underpayments) to
   def refund_to(address, &block)
     #basic test for valid address
     if address =~ /^[13][a-km-zA-HJ-NP-Z0-9]{26,33}$/
@@ -180,6 +191,7 @@ class Falcon < Sinatra::Base
     end
   end
 
+  #verifies that a valid receiving account identifier was supplied
   def pay_to(account_identifier, &block)
     account = ACCOUNT[account_identifier]
     if account
@@ -197,6 +209,7 @@ class Falcon < Sinatra::Base
     end
   end
 
+  #verifies that the receiving account can receive the specified currency
   def with_currency(account, cur, &block)
     if cur.nil?
       halt 400, {
@@ -222,8 +235,9 @@ class Falcon < Sinatra::Base
   end
 
 
-
-  # FOR DEMO PURPOSES
+  # Receiving Accounts
+  # * mocked * FOR DEMO PURPOSES
+  # would in practice be in some database, with accounts that can be credited
   ACCOUNT = {
     "BXACCT0001" => {
       currencies: %w{ZAR XBT}
