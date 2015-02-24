@@ -14,7 +14,7 @@ Details regarding the payer hash and API authentication is to be defined by the 
 
 
 
-# TO run the demo endpoint:
+# To run the demo endpoint:
 
 - install ruby 2.2.0
 - install rubygems
@@ -24,6 +24,8 @@ Details regarding the payer hash and API authentication is to be defined by the 
 
 `bundle exec rackup`
 
+
+In another shell you can then make requests to get mocked responses:
 
 ## using Httpie
 
